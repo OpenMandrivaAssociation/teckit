@@ -13,6 +13,7 @@ Group:          System/Libraries
 URL:            http://scripts.sil.org/teckit
 Source0:        http://scripts.sil.org/svn-view/teckit/TAGS/TECkit_release_2006-09-19.tar.gz
 BuildRequires:  chrpath
+BuildRequires:  libexpat-devel
 BuildRequires:  libz-devel
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
