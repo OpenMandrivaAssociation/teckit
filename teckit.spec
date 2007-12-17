@@ -15,7 +15,6 @@ Source0:        http://scripts.sil.org/svn-view/teckit/TAGS/TECkit_release_2006-
 BuildRequires:  chrpath
 BuildRequires:  libexpat-devel
 BuildRequires:  libz-devel
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
 
 %description 
 TECkit is a low-level toolkit intended to be used by other
