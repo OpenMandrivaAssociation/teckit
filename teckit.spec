@@ -5,7 +5,7 @@
 
 Name:           teckit
 Version:        2.2.1
-Release:        %mkrel 3
+Release:        %mkrel 4
 Epoch:          0
 Summary:        Conversion library and mapping compiler
 License:        LGPL
@@ -70,17 +70,11 @@ Static library for teckit.
 
 %install
 %{__rm} -rf %{buildroot}
-%{makeinstall}
+%{makeinstall_std}
 
 %{_bindir}/chrpath -d %{buildroot}%{_bindir}/sfconv
 %{_bindir}/chrpath -d %{buildroot}%{_bindir}/teckit_compile
 %{_bindir}/chrpath -d %{buildroot}%{_bindir}/txtconv
-
-export EXCLUDE_FROM_EOL_CONVERSION="\
-%{_includedir}/teckit/TECkit_Common.h \
-%{_includedir}/teckit/TECkit_Compiler.h \
-%{_includedir}/teckit/TECkit_Engine.h \
-"
 
 %check
 %{make} check
