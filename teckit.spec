@@ -4,14 +4,14 @@
 %define libname_d_s %mklibname teckit -d -s
 
 Name:           teckit
-Version:        2.2.1
-Release:        %mkrel 5
+Version:        2.5.1
+Release:        %mkrel 1
 Epoch:          0
 Summary:        Conversion library and mapping compiler
 License:        LGPL
 Group:          System/Libraries
 URL:            http://scripts.sil.org/teckit
-Source0:        http://scripts.sil.org/svn-view/teckit/TAGS/TECkit_release_2006-09-19.tar.gz
+Source0:        http://scripts.sil.org/svn-view/teckit/TAGS/TECkit_2_5_1.tar.gz
 BuildRequires:  chrpath
 BuildRequires:  libexpat-devel
 BuildRequires:  libz-devel
@@ -60,7 +60,7 @@ Provides:       %{name}-static-devel = %{epoch}:%{version}-%{release}
 Static library for teckit.
 
 %prep
-%setup -q -n TECkit_release_2006-09-19
+%setup -q -n TECkit_2_5_1
 %{__chmod} 0755 ./configure
 %{__rm} -r zlib*
 
