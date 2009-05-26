@@ -12,6 +12,7 @@ License:        LGPL
 Group:          System/Libraries
 URL:            http://scripts.sil.org/teckit
 Source0:        http://scripts.sil.org/svn-view/teckit/TAGS/TECkit_2_5_1.tar.gz
+Patch0:		TECkit-2.5.1-gcc44.patch
 BuildRequires:  chrpath
 BuildRequires:  libexpat-devel
 BuildRequires:  libz-devel
@@ -63,6 +64,7 @@ Static library for teckit.
 %setup -q -n TECkit_2_5_1
 %{__chmod} 0755 ./configure
 %{__rm} -r zlib*
+%patch0 -p0 -b .gcc44
 
 %build
 %{configure2_5x}
