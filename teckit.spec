@@ -5,7 +5,7 @@
 
 Name:		teckit
 Version:	2.5.1
-Release:	6
+Release:	7
 Epoch:		0
 Summary:	Conversion library and mapping compiler
 License:	LGPL
