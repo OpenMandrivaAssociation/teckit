@@ -66,7 +66,7 @@ Static library for teckit.
 %patch0 -p0 -b .gcc44
 
 %build
-%configure2_5x
+%configure --enable-static
 %make
 
 %install
@@ -101,57 +101,3 @@ Static library for teckit.
 %files -n %{libname_d_s}
 %{_libdir}/libTECkit.a
 %{_libdir}/libTECkit_Compiler.a
-
-
-%changelog
-* Fri May 06 2011 Oden Eriksson <oeriksson@mandriva.com> 0:2.5.1-5mdv2011.0
-+ Revision: 670673
-- mass rebuild
-
-* Fri Dec 03 2010 Oden Eriksson <oeriksson@mandriva.com> 0:2.5.1-4mdv2011.0
-+ Revision: 607986
-- rebuild
-
-* Wed Mar 17 2010 Oden Eriksson <oeriksson@mandriva.com> 0:2.5.1-3mdv2010.1
-+ Revision: 524174
-- rebuilt for 2010.1
-
-* Thu Sep 03 2009 Christophe Fergeau <cfergeau@mandriva.com> 0:2.5.1-2mdv2010.0
-+ Revision: 427289
-- rebuild
-- add missing include to fix gcc 4.4 compilation
-
-* Sat Aug 16 2008 David Walluck <walluck@mandriva.org> 0:2.5.1-1mdv2009.0
-+ Revision: 272753
-- 2.5.1
-
-  + Thierry Vignaud <tv@mandriva.org>
-    - rebuild
-
-  + Pixel <pixel@mandriva.com>
-    - do not call ldconfig in %%post/%%postun, it is now handled by filetriggers
-
-* Mon Jan 07 2008 David Walluck <walluck@mandriva.org> 0:2.2.1-4mdv2008.1
-+ Revision: 146183
-- remove EXCLUDE_FROM_EOL_CONVERSION (no longer needed)
-
-  + Olivier Blin <oblin@mandriva.com>
-    - restore BuildRoot
-
-  + Thierry Vignaud <tv@mandriva.org>
-    - kill re-definition of %%buildroot on Pixel's request
-
-* Fri Jun 22 2007 David Walluck <walluck@mandriva.org> 0:2.2.1-3mdv2008.0
-+ Revision: 42653
-- workaround broken fix-eol rpm-helper script
-- bump release
-- BuildRequires: libexpat-devel
-
-* Fri Jun 22 2007 David Walluck <walluck@mandriva.org> 0:2.2.1-1mdv2008.0
-+ Revision: 42514
-- Import teckit
-
-
-
-* Thu Jun 21 2007 David Walluck <walluck@mandriva.org> 0:2.2.1-1mdv2008.0
-- release
