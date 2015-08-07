@@ -3,6 +3,7 @@
 %define libname_d %mklibname teckit -d
 %define libname_d_s %mklibname teckit -d -s
 %define _disable_rebuild_configure 1
+%define _disable_lto 1
 
 Name:		teckit
 Version:	2.5.1
