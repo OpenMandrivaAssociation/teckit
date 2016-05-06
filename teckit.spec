@@ -6,15 +6,15 @@
 %define _disable_lto 1
 
 Name:		teckit
-Version:	2.5.1
-Release:	14
+Version:	2.5.4
+Release:	1
 Epoch:		0
 Summary:	Conversion library and mapping compiler
 License:	LGPL
 Group:		System/Libraries
 URL:		http://scripts.sil.org/teckit
-Source0:	http://scripts.sil.org/svn-view/teckit/TAGS/TECkit_2_5_1.tar.gz
-Patch0:		TECkit-2.5.1-gcc44.patch
+# Actually https://scripts.sil.org/svn-view/teckit/TAGS/TECkit_%{version}/?view=tar
+Source0:	http://scripts.sil.org/svn-view/teckit/TAGS/TECkit_%{version}.tar.gz
 BuildRequires:	chrpath
 BuildRequires:	expat-devel
 BuildRequires:	zlib-devel
@@ -62,10 +62,9 @@ Provides:	%{name}-static-devel = %{EVRD}
 Static library for teckit.
 
 %prep
-%setup -q -n TECkit_2_5_1
-%__chmod 0755 ./configure
+%setup -qn TRUNK
+./autogen.sh
 %__rm -r zlib*
-%patch0 -p0 -b .gcc44
 
 %build
 %configure --enable-static
@@ -99,6 +98,7 @@ Static library for teckit.
 %{_includedir}/teckit/TECkit_Engine.h
 %{_libdir}/libTECkit.so
 %{_libdir}/libTECkit_Compiler.so
+%{_libdir}/pkgconfig/*.pc
 
 %files -n %{libname_d_s}
 %{_libdir}/libTECkit.a
