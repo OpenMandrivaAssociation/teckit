@@ -6,7 +6,7 @@
 %define _disable_lto 1
 
 Name:		teckit
-Version:	2.5.4
+Version:	2.5.6
 Release:	1
 Epoch:		0
 Summary:	Conversion library and mapping compiler
@@ -14,7 +14,7 @@ License:	LGPL
 Group:		System/Libraries
 URL:		http://scripts.sil.org/teckit
 # Actually https://scripts.sil.org/svn-view/teckit/TAGS/TECkit_%{version}/?view=tar
-Source0:	http://scripts.sil.org/svn-view/teckit/TAGS/TECkit_%{version}.tar.gz
+Source0:	https://github.com/silnrsi/teckit/archive/%{version}.tar.gz
 BuildRequires:	chrpath
 BuildRequires:	expat-devel
 BuildRequires:	zlib-devel
@@ -62,7 +62,7 @@ Provides:	%{name}-static-devel = %{EVRD}
 Static library for teckit.
 
 %prep
-%setup -qn TRUNK
+%setup -q
 ./autogen.sh
 %__rm -r zlib*
 
