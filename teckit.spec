@@ -6,7 +6,7 @@
 %define _disable_lto 1
 
 Name:		teckit
-Version:	2.5.7
+Version:	2.5.9
 Release:	3
 Summary:	Conversion library and mapping compiler
 License:	LGPL
