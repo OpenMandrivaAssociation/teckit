@@ -11,7 +11,7 @@ Release:	2
 Summary:	Conversion library and mapping compiler
 License:	LGPL
 Group:		System/Libraries
-URL:		http://scripts.sil.org/teckit
+URL:		https://scripts.sil.org/teckit
 Source0:	https://github.com/silnrsi/teckit/releases/download/v%{version}/teckit-%{version}.tar.gz
 BuildRequires:	chrpath
 BuildRequires:	expat-devel
