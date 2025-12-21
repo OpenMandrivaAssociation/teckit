@@ -13,6 +13,11 @@ License:	LGPL
 Group:		System/Libraries
 URL:		https://scripts.sil.org/teckit
 Source0:	https://github.com/silnrsi/teckit/releases/download/v%{version}/teckit-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	chrpath
 BuildRequires:	expat-devel
 BuildRequires:	zlib-devel
